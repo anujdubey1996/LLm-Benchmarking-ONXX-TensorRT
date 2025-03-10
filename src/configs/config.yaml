@@ -1,0 +1,13 @@
+model:
+  name: "mistralai/Mistral-7B-v0.1"  # Change if using a different model
+  optimized_path: "src/models/mistral7b_optimized.onnx"
+  trt_path: "src/models/mistral7b.engine"
+  quantization: true  # Enable for faster inference
+  max_new_tokens: 100
+benchmark:
+  runs: 5  # Number of runs for benchmarking
+  batch_size: 2
+  use_gpu: true
+api:
+  host: "0.0.0.0"
+  port: 8000
