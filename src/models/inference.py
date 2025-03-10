@@ -4,7 +4,7 @@ import yaml
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Load configuration file
-with open("src/configs/config.yaml", "r") as f:
+with open("../configs/config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
 MODEL_NAME = config["model"]["name"]
